@@ -1,0 +1,90 @@
+ru:
+  validation:
+    errors:
+      array?: "Не является массивом"
+      key?: "Параметр отсутствует"
+      filled?: "Не может быть пустым"
+      float?: "Не является числом с плавающей запятой"
+      int?: "Не является числом"
+      str?: "Не является строкой"
+      bool?: "Не является логическим значением"
+      max_size?: "Слишком большой длины (количество символов не должно превышать %{num})"
+      format?: "Имеет неверное значение"
+      type?: "Неверный тип данных"
+      excluded_from?: "Должно быть отличным от [%{list}]"
+      gteq?: "Не может быть меньше %{num}"
+      lteq?: "Не может быть больше %{num}"
+      included_in?: "Имеет неверное значение"
+      true?: "Не является истиной"
+      gt?: "Должно быть больше чем %{num}"
+
+      rules:
+        default_files_rule: &default_files_rule
+          invalid_format: "Неверный формат файла"
+          invalid_size: "Размер файлов не должен превышать %{max_size} байт. Текущий размер: %{current_size} байт"
+
+        request:
+          invalid: "Ошибка в запросе"
+
+        model:
+          invalid_model_name: "Неправильное имя модели"
+          missing_param: "Параметр отсутствует или значение пустое"
+          str?: "Неправильный тип параметра или параметр отсутствует"
+
+        id:
+          int?: "Неправильный тип параметра или параметр отсутствует"
+
+        token:
+          filled?: "Не указан"
+          str?: "Не является строкой"
+
+        customer_id:
+          filled?: "Не указан"
+          int?: "Не является числовым идентификатором клиента"
+
+        question:
+          completely_cleared: "Введены недопустимые символы"
+
+        message:
+          completely_cleared: "Введены недопустимые символы"
+
+        description:
+          completely_cleared: "Введены недопустимые символы"
+
+        file:
+          invalid_format: "Неверный формат файла"
+          max_size?: "Файл cлишком большой"
+
+        contract_files:
+          <<: *default_files_rule
+
+        passport_files:
+          <<: *default_files_rule
+
+        taxpayer_id:
+          invalid_length: "ИНН должен состоять строго из 10 или 12 цифр"
+
+        feedback_subcategory_id:
+          not_exists: "Не может быть пустым"
+
+        category:
+          not_exists: "Не может быть пустым"
+
+        item:
+          invalid_format: "Неверный формат файла"
+          format_mismatch: "Несовпадение форматов"
+          file_already_exists: "Операцию произвести невозможно. Наименование и расширение загружаемого файла %{file_name} совпадают с уже имеющимся"
+
+        media_gallery_group_id:
+          not_found: "Не найдено"
+          not_exists: "Не может быть пустым"
+
+        queryParams:
+          hash?: "В запросе отсутствуют необходимые параметры персонализации"
+
+        presentation/page:
+          block_title:
+            blank: "Название блока не может быть пустым"
+
+        params:
+          empty: "В запросе отсутствуют необходимые параметры"
