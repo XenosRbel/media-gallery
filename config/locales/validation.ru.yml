@@ -19,10 +19,6 @@ ru:
       gt?: "Должно быть больше чем %{num}"
 
       rules:
-        default_files_rule: &default_files_rule
-          invalid_format: "Неверный формат файла"
-          invalid_size: "Размер файлов не должен превышать %{max_size} байт. Текущий размер: %{current_size} байт"
-
         request:
           invalid: "Ошибка в запросе"
 
@@ -56,10 +52,12 @@ ru:
           max_size?: "Файл cлишком большой"
 
         contract_files:
-          <<: *default_files_rule
+          invalid_format: "Неверный формат файла"
+          invalid_size: "Размер файлов не должен превышать %{max_size} байт. Текущий размер: %{current_size} байт"
 
         passport_files:
-          <<: *default_files_rule
+          invalid_format: "Неверный формат файла"
+          invalid_size: "Размер файлов не должен превышать %{max_size} байт. Текущий размер: %{current_size} байт"
 
         taxpayer_id:
           invalid_length: "ИНН должен состоять строго из 10 или 12 цифр"

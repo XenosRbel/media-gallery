@@ -1,0 +1,91 @@
+# Required minimum dip version
+version: '4.1'
+
+environment:
+  COMPOSE_EXT: development
+
+compose:
+  files:
+    - docker-compose.yml
+  project_name: media-gallery
+
+interaction:
+  bash:
+    description: Open the Bash shell in app's container
+    service: runner
+    compose:
+      run_options: [no-deps]
+
+  bundle:
+    description: Run Bundler commands
+    service: runner
+    command: bundle
+    compose:
+      run_options: [no-deps]
+
+  psql:
+    description: Run psql command line shell
+    service: postgres
+    command: sh -c 'psql -h postgres'
+    compose:
+      run_options: [no-deps]
+
+  rspec:
+    description: Run Rspec commands
+    service: runner
+    environment:
+      RAILS_ENV: test
+    command: bundle exec rspec
+
+  rails:
+    description: Run Rails commands
+    service: runner
+    command: bundle exec rails
+    subcommands:
+      s:
+        description: Run Rails server at http://localhost:3000
+        service: rails
+        compose:
+          run_options: [service-ports]
+
+  webpacker:
+    description: Run webpacker in background
+    service: webpacker
+    compose:
+      method: up
+      run_options: [detach]
+
+  yarn:
+    description: Run Yarn commands
+    service: runner
+    command: yarn
+    compose:
+      run_options: [no-deps]
+
+  elasticsearch:
+    description: Run Elasticsearch in background
+    service: elasticsearch
+    compose:
+      method: up
+      run_options: [detach]
+
+  db:create:
+    description: Create database
+    service: runner
+    command: bundle exec rails db:create
+    compose:
+      run_options: [no-deps]
+
+  db:drop:
+    description: Drop database
+    service: runner
+    command: bundle exec rails db:drop
+    compose:
+      run_options: [no-deps]
+
+provision:
+  - cp .env.example .env
+  - dip compose down --volumes
+  - dip compose up -d postgres redis
+  - dip rails db:migrate
+  - dip webpacker

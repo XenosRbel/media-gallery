@@ -1,0 +1,14 @@
+.input.datetime.optional {
+  position: relative;
+
+  .clear-link {
+    height: 32px;
+    width: 32px;
+    background-image: url("admin_src/images/remove.png");
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: -32px;
+    top: 23px;
+  }
+}

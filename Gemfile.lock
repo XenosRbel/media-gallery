@@ -93,20 +93,13 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.8.1)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     browser (5.3.1)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.38.0)
-      addressable
-      matrix
-      mini_mime (>= 0.1.3)
-      nokogiri (~> 1.8)
-      rack (>= 1.6.0)
-      rack-test (>= 0.6.3)
-      regexp_parser (>= 1.5, < 3.0)
-      xpath (~> 3.2)
     carrierwave (2.2.2)
       activemodel (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -123,6 +116,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     connection_pool (2.3.0)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     cssbundling-rails (1.1.1)
       railties (>= 6.0.0)
@@ -135,6 +130,7 @@ GEM
     debug (1.6.3)
       irb (>= 1.3.6)
       reline (>= 0.3.1)
+    debug_inspector (1.1.0)
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -183,15 +179,23 @@ GEM
       activesupport (>= 3.2)
     erubi (1.11.0)
     execjs (2.8.1)
+    factory_bot (5.1.2)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     ffaker (2.21.0)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.11)
+      i18n (>= 0.6.6, < 2)
     ice_nine (0.11.2)
     image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
@@ -210,6 +214,8 @@ GEM
     json_matchers (0.11.1)
       json_schema
     json_schema (0.21.0)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     lograge (0.12.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -221,7 +227,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
-    matrix (0.4.2)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -246,6 +251,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
+    oj (3.13.23)
+    oj_mimic_json (1.0.1)
     parallel (1.22.1)
     parallel_tests (4.0.0)
       parallel
@@ -278,6 +285,8 @@ GEM
       rack (>= 1.2.0)
     rack-mobile-detect (0.4.0)
       rack
+    rack-proxy (0.7.4)
+      rack
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4)
@@ -303,6 +312,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
+    rails-i18n (7.0.6)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.4)
       actionpack (= 7.0.4)
       activesupport (= 7.0.4)
@@ -323,7 +335,6 @@ GEM
       connection_pool
     redis-namespace (1.9.0)
       redis (>= 4)
-    regexp_parser (2.6.1)
     reline (0.3.1)
       io-console (~> 0.5)
     request_store (1.5.1)
@@ -419,6 +430,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -431,13 +444,19 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webmock (3.18.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    webpacker (4.3.0)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
     webrick (1.7.0)
     websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xpath (3.2.0)
-      nokogiri (~> 1.8)
     yabeda (0.11.0)
       anyway_config (>= 1.0, < 3)
       concurrent-ruby
@@ -467,9 +486,9 @@ DEPENDENCIES
   activeresource
   after_party
   better_errors
+  binding_of_caller
   bootsnap
   browser
-  capybara
   carrierwave
   carrierwave-size-validator
   carrierwave-video-thumbnailer
@@ -482,15 +501,20 @@ DEPENDENCIES
   dry-struct
   dry-validation
   enumerize
+  factory_bot_rails (~> 5.1.1)
   ffaker
+  i18n-js
   jbuilder
   jsbundling-rails
   json-schema
   json_matchers
+  jsonapi-serializer
   lograge
   mime-types
   mini_magick
   mobile-fu
+  oj
+  oj_mimic_json
   parallel_tests
   pg
   piet
@@ -504,6 +528,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (~> 7.0.4)
   rails-controller-testing
+  rails-i18n
   react-rails
   redis
   redis-namespace
@@ -517,7 +542,6 @@ DEPENDENCIES
   sassc
   sassc-rails
   seedbank
-  selenium-webdriver
   shoulda-matchers
   slim-rails
   spring
@@ -527,8 +551,11 @@ DEPENDENCIES
   streamio-ffmpeg
   turbo-rails
   tzinfo-data
+  uglifier (>= 3.2.0)
   web-console
   webdrivers
+  webmock (~> 3.5, >= 3.5.1)
+  webpacker (~> 4.0, >= 4.0.2)
   yabeda
   yabeda-prometheus-mmap
   yabeda-puma-plugin

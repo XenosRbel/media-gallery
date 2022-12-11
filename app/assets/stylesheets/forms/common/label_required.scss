@@ -1,0 +1,10 @@
+.label--required {
+  &:before {
+    content: '* ';
+  }
+}
+
+em.note {
+  color: #aa1111;
+  font-size: 14px;
+}

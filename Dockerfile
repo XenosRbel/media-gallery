@@ -1,11 +1,12 @@
 FROM ruby:3.1.2-slim-buster
 
-ARG pg_major=12
+ARG pg_major=13
 ARG node_major=14
 ARG node_version=14.15.0
 ARG yarn_version=1.22.19
 
-ENV APP_NAME /gallery
+ENV APP_NAME /app
+ENV APP_HOME /app
 
 RUN set -xe \
   && apt-get update \

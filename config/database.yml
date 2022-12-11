@@ -12,11 +12,11 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV.fetch("DATABASE_NAME") %>
+  database: <%= ENV.fetch("DATABASE_NAME") %>_dev
 
 test:
   <<: *default
-  database: core_test<%= ENV["TEST_ENV_NUMBER"] %>
+  database: <%= ENV.fetch("DATABASE_NAME") %>_test<%= ENV["TEST_ENV_NUMBER"] %>
 
 production:
   <<: *default

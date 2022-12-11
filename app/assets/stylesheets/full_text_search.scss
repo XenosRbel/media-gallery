@@ -1,0 +1,36 @@
+$emperor: #545454;
+$yellow: #ff0;
+
+.search-form {
+  &__btn-submit {
+    padding: .6rem 1rem;
+  }
+
+  &__span {
+    padding-right: 1rem;
+  }
+}
+
+.search-results {
+  .row {
+    margin-bottom: 1.5em;
+  }
+
+  &-snippets {
+    line-height: 1.54;
+    word-wrap: break-word;
+    color: $emperor;
+    font-size: small;
+
+    em {
+      background-color: $yellow;
+      font-style: normal;
+    }
+  }
+
+  .pagination,
+  &--empty {
+    margin-left: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

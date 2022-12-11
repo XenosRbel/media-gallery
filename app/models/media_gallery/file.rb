@@ -12,7 +12,7 @@ module MediaGallery
 
     validates_numericality_of :filesize, :width, :height, only_integer: true
 
-    # mount_uploader :item, MediaGallery::FileUploader
+    mount_uploader :item, ::MediaGallery::FileUploader
 
     delegate :video?, :url, to: :item
 

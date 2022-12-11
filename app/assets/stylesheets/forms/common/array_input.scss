@@ -1,0 +1,22 @@
+.array-element {
+  position: relative;
+
+  .add-array-element, .remove-array-element {
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .remove-array-element {
+    background-image: url("admin_src/images/remove.png");
+  }
+
+  .add-array-element {
+    background-image: url("admin_src/images/add.png");
+  }
+}

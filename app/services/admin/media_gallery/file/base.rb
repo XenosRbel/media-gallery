@@ -5,7 +5,7 @@ module Admin
     module File
       class Base < ApplicationService
         def call(**kwargs)
-          result = validate_params(kwargs)
+          result = validate_params(**kwargs)
 
           if result.success?
             file = process_file(**kwargs, result: result.to_h)

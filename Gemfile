@@ -16,7 +16,7 @@ gem 'turbo-rails'
 gem 'responders'
 
 # Front JS Rendering
-gem "react-rails"
+gem 'react-rails'
 
 # Database
 gem 'activerecord-nulldb-adapter'
@@ -48,7 +48,15 @@ gem 'json-schema'
 # Web Server
 gem 'puma'
 
+# Serializators
+gem 'jsonapi-serializer'
+gem 'oj'
+gem 'oj_mimic_json'
+
+gem "i18n-js"
+gem "rails-i18n"
 gem 'sassc'
+gem 'uglifier', '>= 3.2.0'
 
 gem 'bootsnap', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
@@ -107,6 +115,7 @@ end
 group :development do
   # Debugging
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'
@@ -115,12 +124,12 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
   gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 5.1.1', require: false
   gem 'ffaker'
   gem 'json_matchers'
   gem 'rails-controller-testing'
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webdrivers'
+  gem 'webmock', '~> 3.5', '>= 3.5.1'
 end

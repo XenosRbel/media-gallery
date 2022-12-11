@@ -1,0 +1,40 @@
+.checkbox-star {
+  &::before {
+    font-family: FontAwesome;
+    display: inline-block;
+    cursor: pointer;
+    content: "\f006";
+  }
+
+  &.checked {
+    &::before {
+      content: "\f005";
+    }
+  }
+
+  label,
+  input {
+    display: none;
+  }
+}
+
+
+.checkbox-bookmark {
+  &::before {
+    font-family: FontAwesome;
+    display: inline-block;
+    cursor: pointer;
+    content: "\f097";
+  }
+
+  &.checked {
+    &::before {
+      content: "\f02e";
+    }
+  }
+
+  label,
+  input {
+    display: none;
+  }
+}
