@@ -1,0 +1,27 @@
+default: &default
+  main:
+    host: <%= ENV.fetch("REDIS_SERVER_HOST") %>
+    port: <%= ENV.fetch("REDIS_SERVER_PORT") %>
+    db: 0
+    namespace: <%= ENV.fetch("REDIS_SERVER_NAMESPACE") %>
+
+  reserve:
+    host: <%= ENV.fetch("REDIS_RESERVE_SERVER_HOST") %>
+    port: <%= ENV.fetch("REDIS_RESERVE_SERVER_PORT") %>
+    db: 0
+    namespace: <%= ENV.fetch("REDIS_SERVER_NAMESPACE") %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+staging:
+  <<: *default
+
+preprod:
+  <<: *default
+
+production:
+  <<: *default

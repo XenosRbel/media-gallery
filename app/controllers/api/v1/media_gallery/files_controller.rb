@@ -4,8 +4,7 @@ module Api
   module V1
     module MediaGallery
       class FilesController < ApplicationController
-        # load_and_authorize_resource class: ::MediaGallery::File
-        # skip_load_resource only: %i[create index]
+        before_action :load_resource, only: %i[update show]
 
         def index
           result = file_searcher.call(params: all_params)
@@ -75,6 +74,10 @@ module Api
         end
 
         # :nocov:
+        def load_resource
+          @file = ::MediaGallery::File.find(params[:id])
+        end
+
         def file_creator
           Admin::MediaGallery::File::Creator.new
         end

@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="whitney_rouble" horiz-adv-x="1000" >
+<font-face font-family="whitney_rouble" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="whitney_rouble_fw300" unicode="&#x20bd;" d="M330 304c133 0 235 70 235 200 0 122-86 188-221 188h-158v-346h-67v-42h67v-102h-67v-42h67v-155h47v155h188v42h-188v102h97z m-97 347h108c113 0 174-50 174-150 0-102-69-155-183-155h-99v305z" horiz-adv-x="681" />
+
+<glyph glyph-name="whitney_rouble_fw400" unicode="&#x21bd;" d="M335 293c142 0 241 70 241 205 0 125-86 194-227 194h-166v-338h-78v-61h78v-83h-78v-61h78v-147h66v147h175v61h-175v83h86z m-86 335h97c106 0 161-47 161-135 0-97-64-142-169-142h-89v277z" horiz-adv-x="681" />
+
+<glyph glyph-name="whitney_rouble_fw500" unicode="&#x22bd;" d="M335 282c150 0 250 69 250 211 0 127-89 199-233 199h-183v-327h-72v-83h72v-61h-72v-83h72v-136h94v136h180v83h-180v61h72z m-72 324h83c94 0 144-38 144-119 0-86-55-124-149-124h-78v243z" horiz-adv-x="681" />
+</font>
+</defs>
+</svg>

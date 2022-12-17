@@ -1,0 +1,67 @@
+# Docker
+.dockerignore
+docker-compose*.yml
+docker-compose.*.yml
+Dockerfile
+Dockerfile.*
+.dockerdev/
+dip.yml
+
+# git
+.git
+.gitignore
+
+# database dumps
+db/dumps
+
+# Rails
+public/assets/*
+public/packs*
+public/uploads
+
+# Environment normalization
+.bundle
+vendor/bundle
+node_modules
+
+# Rubymine project directory
+.idea
+# Sublime Text project directory (not created by ST by default)
+.sublime-project
+
+# OSX
+.DS_Store
+
+spec/
+coffeelint.json
+Capfile
+Makefile
+Procfile
+.rspec
+.rubocop.yml
+.ruby-version
+.eslintrc.json
+.scss-lint.yml
+.pronto.yml
+.pronto_eslint_npm.yml
+
+.gitlab-ci.yml
+
+config/deploy
+config/*.example
+config/master.key
+coverage/
+
+# log
+log/*
+
+.ssh
+db/seeds/*
+storage/
+tmp/*
+dive.log
+build_info.txt
+README.md
+
+# k8s
+deploy/k8s

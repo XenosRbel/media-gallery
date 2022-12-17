@@ -1,0 +1,27 @@
+{
+    "id": "z26",
+    "isActive": true,
+    "folder": "bgz",
+    "bankCode": "zenit",
+    "brand": "Банк ЗЕНИТ",
+    "type": "atm",
+    "title": "Банкомат",
+    "position": {
+        "lat": 55.886701000000002,
+        "lng": 37.435909000000002
+    },
+    "city": "Химки",
+    "address": "Московская область, г. Химки, ул. Бутакова, 4",
+    "location": "Мебельный Торговый Комплекс &quot;Гранд&quot;",
+    "is24h": false,
+    "cashIn": true,
+    "cashOut": true,
+    "outCurrency": [
+        "rur"
+    ],
+    "inCurrency": [],
+    "work1": {
+        "name": "Режим работы",
+        "value": "10.00 - 21.00"
+    }
+}

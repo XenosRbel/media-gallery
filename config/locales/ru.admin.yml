@@ -1,0 +1,169 @@
+ru:
+  admin:
+    create: Создать
+    save: Сохранить
+    edit: Редактировать
+    add: Добавить
+    remove: Удалить
+    replace: Заменить
+    media_gallery:
+      actions:
+        titles:
+          upload_file: "Загрузить файл"
+          create_folder: "Создать группу"
+          remove_selected: "Удалить выбранные"
+    javascript:
+      media_gallery:
+        alert_box:
+          tips:
+            error: "Ошибка операции"
+            success: "Операция успешно выполнена"
+            undefined: ""
+          delete:
+            success: "Операция удаления успешно выполнена"
+          put:
+            success: "Операция обновления успешно выполнена"
+          post:
+            success: "Операция загрузки успешно выполнена"
+        folder:
+          modal_title: "Создание группы"
+          rename: "Переименовать"
+          delete: "Удалить"
+          placeholders:
+            type_folder_name: "Введите название группы"
+        file:
+          description:
+            url_copied: "Ссылка скопирована"
+            file_uploaded: "Файл загружен. Сохраните изменения."
+            attributes:
+              additional_info: "Дополнительная информация"
+          attributes:
+            id: "ID"
+            name: "Наименование"
+            filesize: "Размер файла"
+            width: "Ширина"
+            height: "Высота"
+            description: "Описание"
+            url: "Ссылка на файл"
+            folderId: "ID группы"
+            originalImage: "Ссылка на полноформатное изображение"
+            thumbnailImage: "Ссылка на эскиз"
+            folderName: "Наименование группы"
+          import:
+            modal_title: "Добавление нового файла"
+            placeholders:
+              select_folder_name: "Выберите название группы"
+            upload_form:
+              text: "Щелкните или перетащите файл в эту область для загрузки"
+              hint: "Поддержка однократной или массовой загрузки"
+            upload:
+              success: "Файл загружен успешно."
+        files_not_selected: "Файлы не выбраны."
+    activerecord:
+      attributes:
+        media_gallery/folder:
+          name: "Наименование группы"
+          system_name: "Системное наименование группы"
+        media_gallery/file:
+          id: "ID"
+          name: "Наименование"
+          filesize: "Размер файла"
+          width: "Ширина"
+          height: "Высота"
+          description: "Описание"
+          url: "Ссылка на файл"
+          folderId: "ID группы"
+          originalImage: "Ссылка на полноформатное изображение"
+          thumbnailImage: "Ссылка на эскиз"
+          folderName: "Наименование группы"
+          media_gallery_folder_id: "Идентификатор группы"
+      errors:
+        models:
+          media_gallery/folder:
+            attributes:
+              files:
+                has_dependent_records: "Имеет зависимые записи"
+          media_gallery/file:
+            attributes:
+              base:
+                disallow_delete: "Файл не может быть удален"
+    errors:
+      validation:
+        messages:
+          TypeV4: "Свойство %{fragment} не соответствует необходимому типу"
+          Required: "Свойство %{fragment} является обязательным"
+          MinLength: "Свойство %{fragment} не может быть пустым"
+          Enum: "Свойство %{fragment} имеет недопустимое значение"
+      messages:
+        invalid_date: "невалидная дата"
+        invalid_time: "невалидное время"
+        before: "должно быть раньше %{restriction}"
+        on_or_before: "должно быть не раньше %{restriction}"
+        after: "должно быть позже %{restriction}"
+        on_or_after: "должно быть не позже %{restriction}"
+        not_a_float: должно быть числом с плавающей точкой
+      javascript:
+        presentation:
+          page:
+            mediagallery:
+              tab: "Медиагалерея"
+              modal_title: "Добавление из медиагалереи"
+              image: "Изображение"
+              name: "Наименование"
+              folder: "Группа"
+              description: "Описание"
+              height: "Высота"
+              width: "Ширина"
+              size: "Размер"
+              link: "Ссылка"
+        media_gallery:
+          alert_box:
+            tips:
+              error: "Ошибка операции"
+              success: "Операция успешно выполнена"
+            delete:
+              success: "Операция удаления успешно выполнена"
+            put:
+              success: "Операция обновления успешно выполнена"
+            post:
+              success: "Операция загрузки успешно выполнена"
+          folder:
+            modal_title: "Создание группы"
+            rename: "Переименовать"
+            delete: "Удалить"
+            placeholders:
+              type_folder_name: "Введите название группы"
+          file:
+            description:
+              url_copied: "Ссылка скопирована"
+              file_uploaded: "Файл загружен. Сохраните изменения."
+              attributes:
+                additional_info: "Дополнительная информация"
+            attributes:
+              id: "ID"
+              name: "Наименование"
+              filesize: "Размер файла"
+              width: "Ширина"
+              height: "Высота"
+              description: "Описание"
+              url: "Ссылка на файл"
+              folderId: "ID группы"
+              originalImage: "Ссылка на полноформатное изображение"
+              thumbnailImage: "Ссылка на эскиз"
+              folderName: "Наименование группы"
+            import:
+              modal_title: "Добавление нового файла"
+              placeholders:
+                select_folder_name: "Выберите название группы"
+              upload_form:
+                text: "Щелкните или перетащите файл в эту область для загрузки"
+                hint: "Поддержка однократной или массовой загрузки"
+              upload:
+                success: "Файл загружен успешно."
+          files_not_selected: "Файлы не выбраны."
+      media_gallery:
+        actions:
+          titles:
+            upload_file: "Загрузить файл"
+            create_folder: "Создать группу"
+            remove_selected: "Удалить выбранные"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<atm>
+    <srcdvtype>B</srcdvtype>
+    <trmcode>379839</trmcode>
+    <bnkcd>38</bnkcd>
+    <srccity>г. Сергиев Посад</srccity>
+    <srcaddr>пр-кт Красной Армии, д. 236</srcaddr>
+    <srcorg>М-н «Круста»</srcorg>
+    <comment>вход со двора</comment>
+    <srcoutrur>1</srcoutrur>
+    <srcoutusd>0</srcoutusd>
+    <srcouteur>0</srcouteur>
+    <srcwrktm>Круглосуточно</srcwrktm>
+    <_is_cm>1</_is_cm>
+    <_is_geo>1</_is_geo>
+    <usrltd>56.3307000000</usrltd>
+    <usrlng>38.1555500000</usrlng>
+    <comment>Предкассовая зона банкомата</comment>
+    <avail_daily>Круглосуточно|Круглосуточно|Круглосуточно|Круглосуточно|Круглосуточно|Круглосуточно|Круглосуточно</avail_daily>
+    <impaired>1</impaired>
+    <nfc>1</nfc>
+    <nfcmetro>0</nfcmetro>
+    <qrread>1</qrread>
+    <region>Московская обл.</region>
+    <district>г. Сергиев Посад</district>
+    <wheelchair>0</wheelchair>
+</atm>

@@ -1,0 +1,20 @@
+<company>
+    <company-id>01-00-00-000</company-id>
+    <name lang="ru">Совкомбанк</name>
+    <name-other lang="ru">ПАО Совкомбанк</name-other>
+    <country lang="ru">Россия</country>
+    <address lang="ru">Костромская обл, г Кострома, пр-кт Текстильщиков, 46</address>
+    <coordinates>
+        <lon>40.91703930</lon>
+        <lat>57.77382230</lat>
+    </coordinates>
+    <phone>
+        <type>phone</type>
+        <number>8 800 200-66-96</number>
+        <info/>
+    </phone>
+    <url>https://sovcombank.ru</url>
+    <actualization-date>1584491204</actualization-date>
+    <working-time lang="ru">пн-сб: 09:00-17:00;</working-time>
+    <rubric-id>30336</rubric-id>
+</company>

@@ -1,0 +1,27 @@
+<atm uniqueID="819107964527533426">
+	<name>Банкомат в ДО "Комендантский проспект"</name>
+	<lat>60.0069</lat>
+	<lon>30.262801</lon>
+	<city>Санкт-Петербург</city>
+	<address>Комендантский пр-т, 11Б</address>
+	<country>Россия</country>
+	<currencies>
+		<currency>Рубли</currency>
+		<currency> Доллары</currency>
+		<currency> Евро</currency>
+	</currencies>
+	<attributes>
+		<attribute>has-deposit</attribute>
+		<attribute>24h</attribute>
+		<attribute>RUB</attribute>
+		<attribute>USD</attribute>
+		<attribute>EUR</attribute>
+	</attributes>
+	<workhours>
+		<![CDATA[ <p>Ежедневно Ежедневно, круглосуточно<br /></p> ]]>
+	</workhours>
+	<metro></metro>
+	<misc>
+		<![CDATA[]]>
+	</misc>
+</atm>

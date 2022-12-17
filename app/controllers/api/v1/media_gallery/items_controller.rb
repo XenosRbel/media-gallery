@@ -20,7 +20,7 @@ module Api
             is_collection: true,
             params: {
               camelize_keys: true,
-              folder_path_helper: method(:api_v1_media_gallery_folder_path)
+              folder_path_helper: method(:v1_media_gallery_folder_path)
             }
           }
         end

@@ -1,0 +1,103 @@
+// General
+$font-size: $base-font-size - 0.2rem;
+$top-bar-menu-line-height: 2.8rem;
+$fa-icon-vertical-align: sub;
+
+// Left Menu
+$left-menu-min-height: 100vh;
+$left-menu-height: 100%;
+$left-menu-list-border: solid 1px $tuatara;
+
+// Logo
+$left-menu-logo-padding: 0 1.2rem;
+
+// Left Menu
+$left-menu-container-reset-padding-or-margin: 0;
+$left-menu-container-list-link-font-fize: $base-font-size;
+$left-menu-container-list-font-shadow: 0px 0px 1px rgba(0,0,0 , 1);
+$left-menu-container-list-link-padding: 0.5rem;
+$left-menu-container-list-link-icon-max-width: 1.7rem;
+$left-menu-container-list-link-icon-line-heigth: 2.5rem;
+$left-menu-container-list-link-icon-font-size: 1.5rem;
+$left-menu-container-list-padding: 0.5rem 1.2rem;;
+$left-menu-container-list-width: 100%;
+$left-menu-container-list-border: solid 1px $oil;
+
+
+.off-canvas-wrap {
+  .left-off-canvas-menu {
+    min-height: $left-menu-min-height;
+    height: $left-menu-height;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .logo {
+      padding: $left-menu-logo-padding;
+      border-bottom: $tabbar-right-section-border;
+      border-right: $tabbar-right-section-border;
+    }
+    ul.accordion {
+      text-shadow: $left-menu-container-list-font-shadow;
+      li.accordion-navigation {
+        &:not(:last-child) {
+          border-bottom: $left-menu-list-border;
+        }
+        a {
+          color: $primary-color;
+          font-size: $left-menu-container-list-link-font-fize;
+          padding: $left-menu-container-reset-padding-or-margin;
+          padding-left: $left-menu-container-list-link-padding;
+          i.fa {
+            min-width: $left-menu-container-list-link-icon-max-width;
+            line-height: $left-menu-container-list-link-icon-line-heigth;
+            font-size: $left-menu-container-list-link-icon-font-size;
+          }
+        }
+        .content {
+          font-size: $font-size;
+          padding: $left-menu-container-reset-padding-or-margin;
+          ul.inline-list {
+            margin-bottom: $left-menu-container-reset-padding-or-margin;
+            li {
+              width: $left-menu-container-list-width;
+              &:not(:last-child) {
+                border-bottom: $left-menu-container-list-border;
+              }
+              &:hover {
+                background: scale-color($accordion-navigation-active-bg-color, $lightness: 3%);
+              }
+              &.selected {
+                background: scale-color($accordion-navigation-active-bg-color, $lightness: -5%);
+              }
+              a {
+                color:  $secondary-color;
+                padding: $left-menu-container-list-padding;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  form.code-search-form {
+    .code-search-form__input {
+      position: relative;
+      top: 4px;
+    }
+  }
+  nav.tab-bar, .left-off-canvas-menu {
+    .fa {
+      line-height: $top-bar-menu-line-height;
+      vertical-align: $fa-icon-vertical-align;
+    }
+  }
+  nav.tab-bar {
+    font-size: $font-size;
+    section {
+      ul {
+        li {
+          line-height: $top-bar-menu-line-height;
+        }
+      }
+    }
+  }
+}

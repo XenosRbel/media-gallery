@@ -1,0 +1,22 @@
+common: &default_settings
+  cookie_prefix: "development"
+  cors_settings:
+    domains: ["*"]
+    methods: ["get", "options", "post"]
+  env: <%= ENV.fetch("FRONT_TYPE") %>
+
+  redis:
+    memory_storage:
+      expires_in: <%= ENV.fetch("REDIS_MEMORY_STORAGE_EXPIRATION_PERIOD").to_i.minutes %>
+
+development:
+  <<: *default_settings
+
+test:
+  <<: *default_settings
+  cache_store:
+    size: <%= ENV.fetch("CACHE_STORE_MEMORY_LIMIT", 64).to_i.megabytes %>
+
+production:
+  <<: *default_settings
+  cookie_prefix: "production"

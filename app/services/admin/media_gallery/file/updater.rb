@@ -19,7 +19,7 @@ module Admin
           file = kwargs.fetch(:file)
           result = kwargs.fetch(:result)
 
-          file.update(result)
+          file&.update(result)
           file
         end
       end

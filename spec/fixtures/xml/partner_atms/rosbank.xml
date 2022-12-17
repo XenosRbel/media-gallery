@@ -1,0 +1,20 @@
+<company>
+    <company-id>44066</company-id>
+    <name lang="ru">Росбанк, банкомат</name>
+    <post-index/>
+    <country lang="ru">Россия</country>
+    <address lang="ru">Пензенская область, Город Пенза, Улица Плеханова 19</address>
+    <address-add>ТЦ СаниМарт</address-add>
+    <coordinates>
+        <lat>53.200274</lat>
+        <lon>45.012091</lon>
+    </coordinates>
+    <url>https://www.rosbank.ru</url>
+    <info-page>https://www.rosbank.ru/bankomaty</info-page>
+    <working-time>Пн-Вс:09:00-21:00</working-time>
+    <feature-enum-multiple name="operations_accounts_cards" value="issuance_of_cash"/>
+    <feature-boolean name="cash_to_card" value="1"/>
+    <feature-boolean name="accepts_card_mir" value="1"/>
+    <rubric-id>184105402</rubric-id>
+    <actualization-date>1584534794</actualization-date>
+</company>

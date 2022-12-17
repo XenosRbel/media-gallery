@@ -1,5 +1,3 @@
-.row = react_component("MediaGallery", path: api_v1_media_gallery_items_path(format: "json"),
-                                       groupsPath: api_v1_media_gallery_folders_path,
-                                       filesPath: api_v1_media_gallery_files_path)
-
-.row = "#{api_v1_media_gallery_items_path(format: "json")}"
+.row = react_component('MediaGallery', path: File.join('/api', v1_media_gallery_items_path(format: 'json')),
+                                       foldersPath: File.join('/api', v1_media_gallery_folders_path),
+                                       filesPath: File.join('/api', v1_media_gallery_files_path))

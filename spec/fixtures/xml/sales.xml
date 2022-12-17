@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<OTH date_beg=" 2021-07-06" date_end=" 2021-07-06">
+	<FILIAL code="001">
+		<Coins_row>
+			<Coins_catalog>0109-0117</Coins_catalog>
+			<Coins_name>\"Знаки зодиака Рыбы эмитент Республика Беларусь\" Серебряная монета номинал 20 белорусских рублей</Coins_name>
+				<Coins_how_many>20</Coins_how_many>
+			<Coins_ord_cost>915.57</Coins_ord_cost>
+			<geo_object_id>8615</geo_object_id>
+		</Coins_row>
+	</FILIAL>
+</OTH>

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MediaFolder should render correctly 1`] = `
+<Row
+  gutter={
+    Array [
+      16,
+      16,
+    ]
+  }
+  key="folder-"
+>
+  <Col
+    className="center"
+    key="upload-form"
+    md={4}
+  >
+    <Upload
+      accept=""
+      action=""
+      beforeUpload={[Function]}
+      className=""
+      customRequest={[Function]}
+      data={Object {}}
+      disabled={false}
+      listType="picture-card"
+      multiple={false}
+      onChange={[Function]}
+      showUploadList={false}
+      supportServerRender={true}
+      type="select"
+    >
+      <i
+        aria-hidden="true"
+        className="fa fa-plus fa-2x"
+      />
+    </Upload>
+  </Col>
+</Row>
+`;

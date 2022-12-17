@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: LabelForAttribute renders correctly 1`] = `
+<div>
+  <i
+    className=""
+    code={false}
+    copyable={false}
+    delete={false}
+    disabled={false}
+    editable={false}
+    ellipsis={false}
+    mark={false}
+    onChange={[Function]}
+    strong={false}
+    theme="default"
+    type={null}
+    underline={false}
+    variant="small"
+  >
+    i18n_mock
+  </i>
+  <span>
+    : 
+  </span>
+  <i
+    className=""
+    code={false}
+    copyable={false}
+    delete={false}
+    disabled={false}
+    editable={false}
+    ellipsis={false}
+    mark={false}
+    onChange={[Function]}
+    strong={false}
+    theme="default"
+    type={null}
+    underline={false}
+    variant="small"
+  />
+</div>
+`;

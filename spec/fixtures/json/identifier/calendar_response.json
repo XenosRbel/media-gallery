@@ -1,0 +1,12 @@
+[
+  {"date": "2020-10-01", "working": true},
+  {"date": "2020-10-02", "working": true},
+  {"date": "2020-10-03", "working": false},
+  {"date": "2020-10-04", "working": false},
+  {"date": "2020-10-05", "working": true},
+  {"date": "2020-10-06", "working": true},
+  {"date": "2020-10-07", "working": true},
+  {"date": "2020-10-08", "working": true},
+  {"date": "2020-10-09", "working": true},
+  {"date": "2020-10-10", "working": false}
+]

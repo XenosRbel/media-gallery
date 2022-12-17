@@ -1,0 +1,21 @@
+<company>
+    <company-id>3163</company-id>
+    <name lang="ru">Банк УРАЛСИБ</name>
+    <address lang="ru">поселок Новая Адыгея, шоссе Тургеневское, дом 27</address>
+    <country lang="ru">Россия</country>
+    <url>https://www.uralsib.ru/</url>
+    <rubric-id>184105402</rubric-id>
+    <actualization-date>1559752709000</actualization-date>
+    <feature-boolean name="accepts_card_mir" value="1"/>
+    <feature-boolean name="cash_to_card" value="1"/>
+    <feature-enum-multiple name="currency_atm" value="atm_rur"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="transfer_c2c"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="status_account"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="mini_account_statement"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="change_sms_info"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="issuance_of_cash"/>
+    <coordinates>
+        <lon>38.929328</lon>
+        <lat>45.013084</lat>
+    </coordinates>
+</company>

@@ -1,0 +1,33 @@
+ <company>
+    <company-id>461758</company-id>
+    <name lang="ru">Газпромбанк, банкомат</name>
+    <country lang="ru">Россия</country>
+    <locality-name lang="ru">город Астрахань</locality-name>
+    <admn-area lang="ru">Астраханская область</admn-area>
+    <address lang="ru">ул. Кирова 7</address>
+    <address-add lang="ru">ТЦ "ЦУМ"</address-add>
+    <coordinates>
+        <lon>48.038279</lon>
+        <lat>46.352655</lat>
+    </coordinates>
+    <rubric-id>184105402</rubric-id>
+    <url>http://www.gazprombank.ru</url>
+    <phone>
+        <number>8(800) 100-07-01</number>
+        <info>Телефон единой справочной службы</info>
+        <type>phone</type>
+    </phone>
+    <phone>
+        <number>8(800) 100-00-89</number>
+        <info>Круглосуточная служба поддержки держателей банковских карт</info>
+        <type>phone</type>
+    </phone>
+    <working-time lang="ru">ежедневно 9:00 - 19.00</working-time>
+    <actualization-date>12.12.2019</actualization-date>
+    <feature-enum-single name="atm_type" value="type_pvn" />
+    <feature-boolean name="telecard" value="1" />
+    <feature-enum-multiple name="operations_accounts_cards" value="change_sms_info" />
+    <feature-enum-multiple name="operations_accounts_cards" value="new_pin" />
+    <feature-boolean name="cash_to_card" value="0" />
+    <feature-enum-multiple name="additional_features" value="brokerage_account_transfer" />
+</company>

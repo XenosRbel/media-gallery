@@ -1,0 +1,48 @@
+{
+  "env": {
+    "amd": true,
+    "jest": true,
+    "jquery": true
+  },
+  "globals": {
+    "I18n": "readonly",
+    "_": "readonly"
+  },
+  "rules": {
+    "no-console": [2, { "allow": ["error", "warn"] }],
+    "camelcase": [2, {
+      "properties": "never",
+      "ignoreDestructuring": false,
+      "ignoreImports": false,
+      "allow": ["^_"]
+    }],
+    "jsx-a11y/label-has-associated-control": [0],
+    "no-unused-vars": [2, {
+      "args": "all",
+      "argsIgnorePattern": "^_",
+      "ignoreRestSiblings": true,
+      "vars": "all",
+      "varsIgnorePattern": "^_"
+    }],
+    "react/jsx-props-no-spreading": [0],
+    "react/no-danger": [0],
+    "react/jsx-no-bind": [2, {
+      "allowArrowFunctions": true
+    }],
+    "import/no-unresolved": [2, { "ignore": ["antd"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "jest": {
+        "jestConfigFile": "./jest.config.js"
+      },
+      "node": {
+        "extensions": [".js", ".jsx", ".coffee", ".cjsx"],
+        "moduleDirectory": ["./node_modules", "./app/javascript", "./app/javascript/src", "./app/themes"]
+      },
+      "webpack": {
+        "config": "./config/webpack/test.js"
+      }
+    }
+  }
+}

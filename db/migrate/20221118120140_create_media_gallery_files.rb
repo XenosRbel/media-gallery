@@ -1,4 +1,4 @@
-class CreateMediaGalleryFiles < ActiveRecord::Migration[7.0]
+class CreateMediaGalleryFiles < ActiveRecord::Migration[5.0]
   def change
     create_table :media_gallery_files do |t|
       t.string :name, null: false

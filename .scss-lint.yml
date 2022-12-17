@@ -1,0 +1,23 @@
+linters:
+  NestingDepth:
+    max_depth: 6
+  SelectorDepth:
+    max_depth: 5
+  PropertySortOrder:
+    enabled: false
+  SelectorFormat:
+    enabled: false
+  StringQuotes:
+    style: double_quotes
+  IdSelector:
+    enabled: false
+  ElsePlacement:
+    style: new_line
+  PlaceholderInExtend:
+    enabled: false
+  VendorPrefix:
+    enabled: true
+    excluded_identifiers:
+      - text-size-adjust
+  ImportantRule:
+    enabled: true

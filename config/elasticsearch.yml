@@ -1,0 +1,44 @@
+default: &default
+  host: <%= ENV.fetch("ELASTICSEARCH_HOST") %>
+  port: <%= ENV.fetch("ELASTICSEARCH_PORT") %>
+  log_to_stdout: <%= Boolean(ENV.fetch("ELASTICSEARCH_LOG_TO_STDOUT", true)) %>
+  request_timeout: <%= ENV.fetch("ELASTICSEARCH_REQUEST_TIMEOUT", 3).to_i %>
+  max_retries_count: <%= ENV.fetch("ELASTICSEARCH_MAX_RETRIES_COUNT", 3).to_i %>
+  analysis:
+    filter:
+      russian_stop:
+        type: "stop"
+        stopwords: "_russian_"
+      russian_stemmer:
+        type: "stemmer"
+        language: "russian"
+    analyzer:
+      standard:
+        tokenizer: "standard"
+        char_filter:
+          - html_strip
+        filter:
+          - "lowercase"
+          - "russian_stop"
+          - "russian_stemmer"
+      ngram_analyzer:
+        type: "custom"
+        filter:
+          - "lowercase"
+        tokenizer: ngram_tokenizer
+    tokenizer:
+      ngram_tokenizer:
+        type: "ngram"
+        min_gram: 3
+        max_gram: 6
+        token_chars:
+          - "letter"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

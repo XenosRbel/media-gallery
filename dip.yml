@@ -6,7 +6,7 @@ environment:
 
 compose:
   files:
-    - docker-compose.yml
+    - docker-compose.development.yml
   project_name: media-gallery
 
 interaction:
@@ -87,5 +87,6 @@ provision:
   - cp .env.example .env
   - dip compose down --volumes
   - dip compose up -d postgres redis
-  - dip rails db:migrate
+  - dip bash ./bin/setup.sh
+  - dip rails db:setup
   - dip webpacker

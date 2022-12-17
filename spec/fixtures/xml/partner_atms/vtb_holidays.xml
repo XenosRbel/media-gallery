@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<atm>
+    <srcdvtype>A</srcdvtype>
+    <trmcode>382266</trmcode>
+    <bnkcd>38</bnkcd>
+    <srccity>г. Янаул</srccity>
+    <srcaddr>ул. Ленина, д. 1</srcaddr>
+    <srcorg>ТЦ «Шатлык»</srcorg>
+    <srcoutrur>1</srcoutrur>
+    <srcoutusd>0</srcoutusd>
+    <srcouteur>0</srcouteur>
+    <srcwrktm>В режиме работы организации</srcwrktm>
+    <_is_cm>0</_is_cm>
+    <_is_geo>1</_is_geo>
+    <usrltd>56.2670220000</usrltd>
+    <usrlng>54.9328960000</usrlng>
+    <comment>Внутри помещения</comment>
+    <avail_daily>Выходной|Выходной|Выходной|Выходной|Выходной|Выходной|Выходной</avail_daily>
+    <impaired>0</impaired>
+    <nfc>0</nfc>
+    <nfcmetro>0</nfcmetro>
+    <qrread>0</qrread>
+    <region>Респ. Башкортостан</region>
+    <district>Янаульский р-н</district>
+    <wheelchair>0</wheelchair>
+</atm>

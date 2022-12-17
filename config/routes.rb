@@ -1,20 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      namespace :media_gallery do
-        resources :items, only: :index
-        resources :folders, only: %i[create update destroy]
-        resources :files, except: %i[new edit] do
-          collection do
-            delete :destroy
-          end
-        end
-      end
-    end
+  if Rails.env.development?
+    mount Rswag::Api::Engine, at: "/api/docs"
+    mount Rswag::Ui::Engine, at: "/api/docs"
   end
-  get 'components/index'
+
+  mount Api::Engine, at: "/api"
 
   root 'homepage#index'
 end

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "id": "file:/admin/media_gallery/folder.json#",
+  "type": "object",
+  "required": [
+    "system_name",
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "system_name": {
+      "type": "string"
+    }
+  }
+}

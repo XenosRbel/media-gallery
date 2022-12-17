@@ -1,0 +1,35 @@
+<company>
+    <company-id>102</company-id>
+    <name lang="ru">Райффайзенбанк</name>
+    <name lang="en">Raiffeisenbank</name>
+    <country lang="ru">Россия</country>
+    <address lang="ru">город Москва, улица Бакунинская, дом 10/12, стр. 5</address>
+    <address-add lang="ru">Отделение "Бакунинская 10/12"</address-add>
+    <coordinates>
+        <lon>37.681306</lon>
+        <lat>55.773773</lat>
+    </coordinates>
+    <phone>
+        <number>+7 (495) 777-17-17</number>
+        <type>phone</type>
+        <info>круглосуточная служба поддержки</info>
+    </phone>
+    <url>http://www.raiffeisen.ru</url>
+    <working-time lang="ru">пн-пт: 10:00-20:00, сб: 10:00-17:00</working-time>
+    <rubric-id>184105402</rubric-id>
+    <actualization-date>1584549301000</actualization-date>
+    <feature-boolean name="cash_to_card" value="1"/>
+    <feature-boolean name="accepts_card_mir" value="1"/>
+    <feature-enum-multiple name="currency_atm" value="atm_rur"/>
+    <feature-enum-multiple name="currency_atm" value="atm_eur"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="issuance_of_cash"/>
+    <feature-enum-multiple name="additional_features" value="pay_for_internet_access"/>
+    <feature-enum-multiple name="additional_features" value="payment_for_communal_services"/>
+    <feature-enum-multiple name="additional_features" value="payment_of_commercial_tv"/>
+    <feature-enum-multiple name="additional_features" value="payment_of_cellular_communication"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="loan_payment"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="transfer_c2c"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="status_account"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="new_pin"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="change_sms_info"/>
+</company>

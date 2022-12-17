@@ -1,4 +1,4 @@
-class AddItemToMediaGalleryFiles < ActiveRecord::Migration[7.0]
+class AddItemToMediaGalleryFiles < ActiveRecord::Migration[5.0]
   def up
     add_column :media_gallery_files, :item, :string
 

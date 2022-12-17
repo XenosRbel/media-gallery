@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<point type_name="Банкомат" type="atm" company_name="Банк Русский Стандарт" company="rs" company_id="1">
+    <id uid="">829445</id>
+    <address region="Воронежская" region_txt="Воронежская область" r_abbr="обл." city="Воронеж" city_txt="г. Воронеж" c_abbr="г." street="Московский" street_txt="пр-т Московский" s_abbr="пр-т" sub_city="" sub_city_abbr="" sub_city_txt="" house="7е" lat="51.683703" lon="39.183246" zoom="16" postal_code="">г. Воронеж, пр-т Московский, д. 7е</address>
+    <placename>Кредитно-кассовый офис «Воронеж — Московский» АО «Банк Русский Стандарт»</placename>
+    <metro/>
+    <email/>
+    <phones/>
+    <categories>cash_in; rur_in; cash_out; rur_out; service_payments</categories>
+    <categories_name>Прием рубли рф; Выдача рубли рф; Оплата услуг</categories_name>
+    <worktimes>
+        <worktime time_from="09:00:00" time_to="19:00:00" break_from="" break_to="" days_number="1234567" days="Пн-Вс" name="Пн-Вс 09:00-19:00" days_string="В режиме работы организации" extra="В режиме работы организации"/>
+    </worktimes>
+    <workschedule>
+        <shedule days="-" timefrom="" timeto="" breakfrom="" breakto="" days_string="">-</shedule>
+        <shedule days="" timefrom="0000" timeto="0000" breakfrom="other" breakto="other" days_string="always2"/>
+    </workschedule>
+</point>

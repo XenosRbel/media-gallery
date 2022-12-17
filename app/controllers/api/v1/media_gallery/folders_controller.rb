@@ -4,8 +4,7 @@ module Api
   module V1
     module MediaGallery
       class FoldersController < ApplicationController
-        # load_and_authorize_resource class: ::MediaGallery::Folder
-        # skip_load_resource only: :create
+        before_action :load_resource, only: %i[update destroy]
 
         def create
           result = folder_creator.call(folder_params: folder_params)
@@ -48,6 +47,11 @@ module Api
           Admin::MediaGallery::FolderSerializer.new(folder)
         end
 
+        # :nocov:
+        def load_resource
+          @folder = ::MediaGallery::Folder.find(params[:id])
+        end
+
         def folder_updater
           Admin::MediaGallery::Folder::Updater.new
         end
@@ -59,6 +63,7 @@ module Api
         def folder_destroyer
           Admin::MediaGallery::Folder::Destroyer.new
         end
+        # :nocov:
       end
     end
   end

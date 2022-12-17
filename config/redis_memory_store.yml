@@ -1,0 +1,14 @@
+default: &default
+  host: <%= ENV.fetch("REDIS_MEMORY_STORE_SERVER_HOST") %>
+  port: <%= ENV.fetch("REDIS_MEMORY_STORE_SERVER_PORT") %>
+  db: 1
+  namespace: <%= ENV.fetch("REDIS_MEMORY_STORE_SERVER_NAMESPACE") %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

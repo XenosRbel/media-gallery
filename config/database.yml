@@ -1,4 +1,4 @@
-default: &default
+defaults: &defaults
   adapter: <%= ENV.fetch("DATABASE_ADAPTER") %>
   encoding: utf8
   reconnect: true
@@ -11,12 +11,12 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
+  <<: *defaults
   database: <%= ENV.fetch("DATABASE_NAME") %>_dev
 
-test:
-  <<: *default
+test: &test
+  <<: *defaults
   database: <%= ENV.fetch("DATABASE_NAME") %>_test<%= ENV["TEST_ENV_NUMBER"] %>
 
 production:
-  <<: *default
+  <<: *defaults

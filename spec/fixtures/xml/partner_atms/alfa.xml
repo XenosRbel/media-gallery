@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+    <company-id>222581</company-id>
+    <name lang="ru">Альфа-Банк, банкомат</name>
+    <address lang="ru">ул Карла Маркса, д 99</address>
+    <locality-name lang="ru">Киров</locality-name>
+    <country lang="ru">Россия</country>
+    <address-add lang="ru">ККО "Вятка"</address-add>
+    <coordinates>
+        <lon>49.667933</lon>
+        <lat>58.595512</lat>
+    </coordinates>
+    <phone>
+        <number>8 (800) 200-00-00</number>
+        <type>phone</type>
+    </phone>
+    <phone>
+        <number>+7 (495) 755-58-58</number>
+        <type>phone</type>
+        <info>Для юридических лиц</info>
+    </phone>
+    <phone>
+        <number>+7 (495) 788-88-78</number>
+        <type>phone</type>
+        <info>Для физических лиц</info>
+    </phone>
+    <url>https://alfabank.ru</url>
+    <add-url>https://vk.com/alfabank</add-url>
+    <add-url>https://www.facebook.com/alfabank</add-url>
+    <add-url>https://ok.ru/alfabank</add-url>
+    <add-url>https://www.youtube.com/user/alfabankru</add-url>
+    <add-url>https://twitter.com/alfabank</add-url>
+    <add-url>https://www.instagram.com/alfabank</add-url>
+    <working-time lang="ru">круглосуточно</working-time>
+    <rubric-id>184105402</rubric-id>
+    <actualization-date>23.12.2021</actualization-date>
+    <feature-boolean name="account_refilling_without_card" value="1"/>
+    <feature-boolean name="nfc" value="1"/>
+    <feature-boolean name="cash_in" value="1"/>
+    <feature-boolean name="cash_to_card" value="1"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="transfer_c2c"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="transfer_c2d"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="transfer_between_accounts"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="loan_payment"/>
+    <feature-enum-multiple name="additional_features" value="pay_for_internet_access"/>
+    <feature-enum-multiple name="additional_features" value="payment_of_cellular_communication"/>
+    <feature-enum-multiple name="currency_atm" value="atm_rur"/>
+    <feature-enum-multiple name="currency_atm" value="atm_usd"/>
+    <feature-enum-multiple name="currency_atm" value="atm_eur"/>
+    <feature-enum-multiple name="operations_accounts_cards" value="issuance_of_cash"/>
+</company>
