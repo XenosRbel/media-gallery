@@ -9,18 +9,12 @@ unless ENV["SKIP_COVERAGE"]
 
   GROUPS = {
     "Contracts" => "app/contracts",
-    "Forms" => "app/forms",
-    "Datatables" => "app/datatables",
-    "Decorators" => "app/decorators",
-    "Inputs" => "app/inputs",
-    "Model views" => "app/model_views",
-    "Presenters" => "app/presenters",
+    "Service objects" => "app/service_objects",
     "Queries" => "app/queries",
     "Repositories" => "app/repositories",
     "Serializers" => "app/serializers",
     "Services" => "app/services",
-    "Uploaders" => "app/uploaders",
-    "Validators" => "app/validators"
+    "Uploaders" => "app/uploaders"
   }.freeze
 
   EXCLUDED_PATHS = (
@@ -31,8 +25,7 @@ unless ENV["SKIP_COVERAGE"]
     %w[
       config/
       db/
-      lib/tasks/deployment
-      app/helpers/admin/navigation/
+      lib/
       vendor/
     ]
   ).freeze

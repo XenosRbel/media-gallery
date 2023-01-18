@@ -1,4 +1,4 @@
-export_i18n_js: false
+export_i18n_js: true
 translations:
   - file: app/javascript/admin/common/translations.js
     only:
@@ -7,5 +7,3 @@ translations:
       - ru.errors.*
       - en.admin.*
       - ru.admin.*
-      - en.responders.*
-      - ru.responders.*

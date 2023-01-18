@@ -10,7 +10,7 @@ ru:
       actions:
         titles:
           upload_file: "Загрузить файл"
-          create_folder: "Создать группу"
+          create_folder: "Создать папку"
           remove_selected: "Удалить выбранные"
     javascript:
       media_gallery:
@@ -26,11 +26,11 @@ ru:
           post:
             success: "Операция загрузки успешно выполнена"
         folder:
-          modal_title: "Создание группы"
+          modal_title: "Создание папки"
           rename: "Переименовать"
           delete: "Удалить"
           placeholders:
-            type_folder_name: "Введите название группы"
+            type_folder_name: "Введите название папки"
         file:
           description:
             url_copied: "Ссылка скопирована"
@@ -45,14 +45,14 @@ ru:
             height: "Высота"
             description: "Описание"
             url: "Ссылка на файл"
-            folderId: "ID группы"
+            folderId: "ID папки"
             originalImage: "Ссылка на полноформатное изображение"
             thumbnailImage: "Ссылка на эскиз"
-            folderName: "Наименование группы"
+            folderName: "Наименование папки"
           import:
             modal_title: "Добавление нового файла"
             placeholders:
-              select_folder_name: "Выберите название группы"
+              select_folder_name: "Выберите название папки"
             upload_form:
               text: "Щелкните или перетащите файл в эту область для загрузки"
               hint: "Поддержка однократной или массовой загрузки"
@@ -62,8 +62,8 @@ ru:
     activerecord:
       attributes:
         media_gallery/folder:
-          name: "Наименование группы"
-          system_name: "Системное наименование группы"
+          name: "Наименование папки"
+          system_name: "Системное наименование папки"
         media_gallery/file:
           id: "ID"
           name: "Наименование"
@@ -72,11 +72,11 @@ ru:
           height: "Высота"
           description: "Описание"
           url: "Ссылка на файл"
-          folderId: "ID группы"
+          folderId: "ID папки"
           originalImage: "Ссылка на полноформатное изображение"
           thumbnailImage: "Ссылка на эскиз"
-          folderName: "Наименование группы"
-          media_gallery_folder_id: "Идентификатор группы"
+          folderName: "Наименование папки"
+          media_gallery_folder_id: "Идентификатор папки"
       errors:
         models:
           media_gallery/folder:
@@ -128,11 +128,11 @@ ru:
             post:
               success: "Операция загрузки успешно выполнена"
           folder:
-            modal_title: "Создание группы"
+            modal_title: "Создание папки"
             rename: "Переименовать"
             delete: "Удалить"
             placeholders:
-              type_folder_name: "Введите название группы"
+              type_folder_name: "Введите название папки"
           file:
             description:
               url_copied: "Ссылка скопирована"
@@ -147,14 +147,14 @@ ru:
               height: "Высота"
               description: "Описание"
               url: "Ссылка на файл"
-              folderId: "ID группы"
+              folderId: "ID папки"
               originalImage: "Ссылка на полноформатное изображение"
               thumbnailImage: "Ссылка на эскиз"
-              folderName: "Наименование группы"
+              folderName: "Наименование папки"
             import:
               modal_title: "Добавление нового файла"
               placeholders:
-                select_folder_name: "Выберите название группы"
+                select_folder_name: "Выберите название папки"
               upload_form:
                 text: "Щелкните или перетащите файл в эту область для загрузки"
                 hint: "Поддержка однократной или массовой загрузки"
@@ -165,5 +165,5 @@ ru:
         actions:
           titles:
             upload_file: "Загрузить файл"
-            create_folder: "Создать группу"
+            create_folder: "Создать папку"
             remove_selected: "Удалить выбранные"

@@ -1,0 +1,90 @@
+version: '3.7'
+
+volumes:
+  postgres:
+  redis:
+  bundle:
+  node_modules:
+  rails_cache:
+  packs:
+
+services:
+  redis:
+    image: redis:7.0.4
+    volumes:
+      - redis:/data
+    ports:
+      - 6379:6379
+
+  postgres:
+    image: postgres:13.2-alpine
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./db/dumps:/docker-entrypoint-initdb.d/dumps
+      - ./log:/root/log:cached
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      PSQL_HISTFILE: /root/log/.psql_history
+    ports:
+      - '5432:5432'
+
+  elasticsearch:
+    image: elasticsearch:7.17.2
+    command:
+      - "bin/elasticsearch"
+      - "-Expack.security.enabled=false"
+      - "-Ediscovery.type=single-node"
+      - "-Ebootstrap.memory_lock=true"
+    environment:
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - '9200:9200'
+
+  gallery:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    tty: true
+    image: xenosrbel/mediagallery:latest
+    entrypoint: /app/docker-compose-entrypoint.sh
+    command: [ 'rails', 'server', '-b', '0.0.0.0', '-p', '3000']
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - rails_cache:/app/tmp/cache
+      - bundle:/bundle
+      - node_modules:/app/node_modules
+      - packs:/app/public/packs
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME:-app}
+      POSTGRES_USER: ${DATABASE_USERNAME:-app}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-app}
+      PGUSER: ${DATABASE_USERNAME:-app}
+      PGPASSWORD: ${DATABASE_PASSWORD:-app}
+      PGDATABASE: ${DATABASE_NAME:-app}
+      PGPORT: 5432
+      DATABASE_HOST: postgres
+      DATABASE_USERNAME: ${DATABASE_USERNAME:-app}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-app}
+      DATABASE_NAME: ${DATABASE_NAME:-app}
+      REDIS_URL: redis://redis:6379/
+      ELASTICSEARCH_HOST: elasticsearch
+      BOOTSNAP_CACHE_DIR: /bundle/bootsnap
+      HISTFILE: /app/log/.bash_history
+      DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: "false"
+      EDITOR: nano
+      RAILS_LOG_TO_STDOUT: "true"
+      NODE_ENV: production
+      RAILS_ENV: production
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      WEBPACK_BUNDLE_ANALYZER_HOST: 0.0.0.0
+    links:
+      - elasticsearch
+      - postgres
+      - redis
+    depends_on:
+      - elasticsearch
+      - redis
+      - postgres

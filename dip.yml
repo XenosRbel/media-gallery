@@ -35,6 +35,7 @@ interaction:
     service: runner
     environment:
       RAILS_ENV: test
+      SKIP_COVERAGE: false
     command: bundle exec rspec
 
   rails:
